@@ -1,10 +1,8 @@
 loadstring(game:HttpGet(('https://pastebin.com/raw/v9P6zsuW'),true))()
 
---[[
-made by rouxhaver
 
-Note: Im too stupid to figure out how to stop hats from falling; so your character will reset once this happens
-]]
+-- made by rouxhaver, modified by Windows7King
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
@@ -217,7 +215,7 @@ Mgrabs.Style = "Movement"
 Rgrabs.Visible = false
 
 Outline.FillTransparency = 1
-Outline.OutlineTransparency = 0
+Outline.OutlineTransparency = 0.5
 Outline.OutlineColor = Color3.new(1, 0.8, 0)
 
 Active_Part = nil
@@ -317,9 +315,9 @@ input = game:GetService("UserInputService")
 
 Camera_Part = Instance.new("Part",workspace)
 Camera_Part.Anchored = true
-Camera_Part.Transparency = 0.85
+Camera_Part.Transparency = 1
 Camera_Part.Shape = Enum.PartType.Ball
-Camera_Part.Size = Vector3.new(0.5,0.5,0.5)
+Camera_Part.Size = Vector3.new(0,0,0)
 Camera_Part.Material = Enum.Material.SmoothPlastic
 
 current_position = char.Head.Position
@@ -327,15 +325,11 @@ current_position = char.Head.Position
 camera.CameraSubject = Camera_Part
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "FE BTools Loaded",
-	Text = "Made by rouxhaver",
-	Icon = "rbxassetid://12997341656"
+	Title = "FE BTOOLS V5",
+	Text = "Modified by Windows7King",
+	Icon = "rbxassetid://15655755930"
 })
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Network Credit:",
-	Text = "thanks to 4eyes for network stuff",
-	Icon = "rbxassetid://12997341656"
-})
+
 while wait() do
 	if input:IsKeyDown(Enum.KeyCode.D) then
 		current_position += camera.CFrame.RightVector * speed
@@ -356,7 +350,7 @@ while wait() do
 		current_position += camera.CFrame.UpVector * -speed
 	end
 	if input:IsKeyDown(Enum.KeyCode.LeftShift) then do
-			speed = 1.5
+			speed = 2
 		end else
 		speed = 0.75
 	end
