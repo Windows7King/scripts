@@ -1,7 +1,11 @@
+----------------------------------------------
+--Made by Rouxhaver / Modified by Windows7King
+----------------------------------------------
+
+
+
 loadstring(game:HttpGet(('https://pastebin.com/raw/v9P6zsuW'),true))()
 
-
--- made by rouxhaver, modified by Windows7King
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
