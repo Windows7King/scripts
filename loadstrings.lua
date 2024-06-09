@@ -5,3 +5,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
 --BTOOLS V5
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/BTOOLS_V5.lua"))()
+
+--FLOATING TOOLS
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FLOATING_TOOLS.lua"))()
