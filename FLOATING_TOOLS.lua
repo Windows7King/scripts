@@ -3,7 +3,7 @@
 --------------------------
 
 
-----------------
+-----------------
 -- J to make fly
 -- K to call back
 -----------------
@@ -16,7 +16,9 @@ local options = {
     
     	HotKeys = {
 		Release = Enum.KeyCode.J,
-        	Capture = Enum.KeyCode.K
+        	Capture = Enum.KeyCode.K,
+		Tenlease = Enum.KeyCode.P
+		
 	}
 }
 
