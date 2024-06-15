@@ -8,3 +8,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
 --FLOATING TOOLS
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FLOATING_TOOLS.lua"))()
+
+--FLING PUNCH
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FLING_PUNCH.lua"))()
