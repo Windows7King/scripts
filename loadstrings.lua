@@ -11,3 +11,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
 --FLING PUNCH
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FLING_PUNCH.lua"))()
+
+--AVATAR CREATOR
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/AVATAR_CREATOR.lua"))()
