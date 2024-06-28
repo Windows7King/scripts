@@ -1,14 +1,18 @@
---------------------------
---Made by Rouxhaver
+-------------------------
+--Made by rouxhaver
 --Network Library by 4eyes
+--Modified by Windows7King
 --------------------------
-
-
-
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
+local Char = LocalPlayer.Character
+
+--------------Configuration----------
+local OutlineTransparency = 0.35
+local BlocksAnchored = true
+-------------------End---------------
 
 if not getgenv().Network then
 	getgenv().Network = {
@@ -148,17 +152,20 @@ Parts_Folder = Instance.new("Folder",workspace)
 
 for i, Hat in pairs(player.Character:GetChildren()) do
 	if Hat:IsA("Accessory") then
-		local Part = Instance.new("Part",Parts_Folder)
-		Part.Name = Hat.Name
-		Part.Anchored = true
-		Part.Size = Hat.Handle.Size
-		Part.Position = player.Character.Head.Position + Vector3.new(math.random(-5,5),math.random(-1,1),math.random(-5,5))
-		Part:SetAttribute("Moveable",true)
-		Part.Material = Enum.Material.SmoothPlastic
-		Part.CanCollide = false
-        Part.Color = Color3.new(1,0,0)
+		RedBlock = Instance.new("Part",Parts_Folder)
+		RedBlock.Name = Hat.Name
+		RedBlock.Anchored = BlocksAnchored
+		RedBlock.Size = Hat.Handle.Size
+		RedBlock.Position = player.Character.Head.Position + Vector3.new(math.random(-8,8),math.random(3,6),math.random(-8,8))
+		RedBlock:SetAttribute("Moveable",true)
+		RedBlock.Material = Enum.Material.SmoothPlastic
+		RedBlock.CanCollide = true
+        RedBlock.Color = Color3.new(1,0,0)
+
 	end
 end
+
+
 
 
 Move_Tool = Instance.new("Tool",Backpack)
@@ -188,19 +195,21 @@ Mgrabs.Style = "Movement"
 Rgrabs.Visible = false
 
 Outline.FillTransparency = 1
-Outline.OutlineTransparency = 0
 
 Active_Part = nil
 
 Move_Tool.Equipped:Connect(function()
 	if Active_Part ~= nil then
 		Mgrabs.Visible = true
+        Outline.OutlineTransparency = OutlineTransparency
 		Mgrabs.Adornee = Active_Part
 	end
 end)
 
+
 Move_Tool.Unequipped:Connect(function()
 	Mgrabs.Visible = false
+    Outline.OutlineTransparency = 1
 	Mgrabs.Adornee = nil
 end)
 
@@ -216,6 +225,7 @@ end)
 Rotate_Tool.Equipped:Connect(function()
 	if Active_Part ~= nil then
 		Rgrabs.Visible = true
+        Outline.OutlineTransparency = OutlineTransparency
 		Rgrabs.Adornee = Active_Part
 	end
 end)
@@ -223,6 +233,7 @@ end)
 Rotate_Tool.Unequipped:Connect(function()
 	Rgrabs.Visible = false
 	Rgrabs.Adornee = nil
+    Outline.OutlineTransparency = 1
 end)
 
 Rotate_Tool.Activated:Connect(function()
@@ -280,14 +291,12 @@ Rgrabs.MouseDrag:Connect(function(knob, angle)
 end)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "FE BTools V3 Loaded",
-	Text = "Made by rouxhaver",
-	Icon = "rbxassetid://12561999923"
+	Title = "FE BTools V3",
+	Text = "Modified by Windows7King",
 })
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Network Credit:",
-	Text = "thanks to 4eyes for network stuff",
-	Icon = "rbxassetid://12562053596"
+	Title = "Press P to toggle Anchoring",
+	Text = "",
 })
 
 HRP = player.Character.HumanoidRootPart
