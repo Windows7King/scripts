@@ -14,3 +14,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
 --AVATAR CREATOR
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/AVATAR_CREATOR.lua"))()
+
+--LASER ARM
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/LASER_ARM.lua"))()
