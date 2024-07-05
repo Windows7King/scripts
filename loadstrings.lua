@@ -17,3 +17,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
 --LASER ARM
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/LASER_ARM.lua"))()
+
+--[[ STAND ]]--
+
+    --Normal Stand: 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/STAND.lua"))() 
+
+    --Big Arms Stand:
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/BIG_ARMS_STAND.lua"))()
