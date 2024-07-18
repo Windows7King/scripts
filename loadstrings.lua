@@ -25,3 +25,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/
 
     --Big Arms Stand:
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/BIG_ARMS_STAND.lua"))()
+
+--Immortality Lord:
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/Immortality_Lord.lua"))()
