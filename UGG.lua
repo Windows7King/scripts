@@ -1,5 +1,15 @@
--- Ultimate Genesis Gui UGG V3.1
--- Version: 3.2
+--[[
+_   _ _ _   _                 _         _____                      _       _____ _   _ _____ 
+| | | | | | (_)               | |       |  __ \                    (_)     |  __ \ | | |_   _|
+| | | | | |_ _ _ __ ___   __ _| |_ ___  | |  \/ ___ _ __   ___  ___ _ ___  | |  \/ | | | | |  
+| | | | | __| | '_ ` _ \ / _` | __/ _ \ | | __ / _ \ '_ \ / _ \/ __| / __| | | __| | | | | |  
+| |_| | | |_| | | | | | | (_| | ||  __/ | |_\ \  __/ | | |  __/\__ \ \__ \ | |_\ \ |_| |_| |_ 
+ \___/|_|\__|_|_| |_| |_|\__,_|\__\___|  \____/\___|_| |_|\___||___/_|___/  \____/\___/ \___/ 
+
+]]
+                                                                                              
+
+-- Version: v3.2
 
 -- Instances:
 
@@ -122,7 +132,7 @@ Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button.BorderSizePixel = 0
 Button.Position = UDim2.new(0, 10, 0, 0)
 Button.Size = UDim2.new(0, 235, 0, 40)
-Button.Font = Enum.Font.Unknown
+Button.Font = Enum.Font.FredokaOne
 Button.Text = "Goner"
 Button.TextColor3 = Color3.fromRGB(245, 245, 245)
 Button.TextSize = 22.000
@@ -150,7 +160,7 @@ Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button_2.BorderSizePixel = 0
 Button_2.Position = UDim2.new(0, 10, 0, 0)
 Button_2.Size = UDim2.new(0, 235, 0, 40)
-Button_2.Font = Enum.Font.Unknown
+Button_2.Font = Enum.Font.FredokaOne
 Button_2.Text = "Sniper"
 Button_2.TextColor3 = Color3.fromRGB(245, 245, 245)
 Button_2.TextSize = 22.000
@@ -178,7 +188,7 @@ Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button_3.BorderSizePixel = 0
 Button_3.Position = UDim2.new(0, 10, 0, 0)
 Button_3.Size = UDim2.new(0, 235, 0, 40)
-Button_3.Font = Enum.Font.Unknown
+Button_3.Font = Enum.Font.FredokaOne
 Button_3.Text = "AK-47"
 Button_3.TextColor3 = Color3.fromRGB(245, 245, 245)
 Button_3.TextSize = 22.000
@@ -566,7 +576,7 @@ UGG.TextWrapped = true
 
 -- Scripts:
 
-local function FAFAFD_fake_script() -- R6.PromptR6 
+local function PYMDD_fake_script() -- R6.PromptR6 
 	local script = Instance.new('LocalScript', R6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -584,8 +594,8 @@ local function FAFAFD_fake_script() -- R6.PromptR6
 		end
 	end)
 end
-coroutine.wrap(FAFAFD_fake_script)()
-local function UJCUV_fake_script() -- Respawn.Respawn 
+coroutine.wrap(PYMDD_fake_script)()
+local function DXGT_fake_script() -- Respawn.Respawn 
 	local script = Instance.new('LocalScript', Respawn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -594,8 +604,8 @@ local function UJCUV_fake_script() -- Respawn.Respawn
 		humanoid:ChangeState(Enum.HumanoidStateType.Dead)
 	end)
 end
-coroutine.wrap(UJCUV_fake_script)()
-local function IHUL_fake_script() -- Options.option_toggle 
+coroutine.wrap(DXGT_fake_script)()
+local function YOZYCLA_fake_script() -- Options.option_toggle 
 	local script = Instance.new('LocalScript', Options)
 
 	local button = script.Parent
@@ -633,8 +643,8 @@ local function IHUL_fake_script() -- Options.option_toggle
 	
 	
 end
-coroutine.wrap(IHUL_fake_script)()
-local function MLJCV_fake_script() -- MAIN.Drag 
+coroutine.wrap(YOZYCLA_fake_script)()
+local function PXOUVLK_fake_script() -- MAIN.Drag 
 	local script = Instance.new('LocalScript', MAIN)
 
 	local UIS = game:GetService('UserInputService')
@@ -672,8 +682,8 @@ local function MLJCV_fake_script() -- MAIN.Drag
 		end
 	end)
 end
-coroutine.wrap(MLJCV_fake_script)()
-local function YDMU_fake_script() -- X.Close 
+coroutine.wrap(PXOUVLK_fake_script)()
+local function CVDMWN_fake_script() -- X.Close 
 	local script = Instance.new('LocalScript', X)
 
 	local main = script.Parent.Parent
@@ -685,8 +695,8 @@ local function YDMU_fake_script() -- X.Close
 		main.Parent.UGG.Interactable = true
 	end)
 end
-coroutine.wrap(YDMU_fake_script)()
-local function MAZYBLZ_fake_script() -- Checkmark.LocalScript 
+coroutine.wrap(CVDMWN_fake_script)()
+local function RCTMEX_fake_script() -- Checkmark.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark)
 
 	--[[
@@ -726,8 +736,8 @@ local function MAZYBLZ_fake_script() -- Checkmark.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MAZYBLZ_fake_script)()
-local function UNPV_fake_script() -- Checkmark_2.LocalScript 
+coroutine.wrap(RCTMEX_fake_script)()
+local function XTGYQ_fake_script() -- Checkmark_2.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_2)
 
 	--[[
@@ -767,8 +777,8 @@ local function UNPV_fake_script() -- Checkmark_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UNPV_fake_script)()
-local function YRHR_fake_script() -- Checkmark_3.LocalScript 
+coroutine.wrap(XTGYQ_fake_script)()
+local function AMFGMO_fake_script() -- Checkmark_3.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_3)
 
 	--[[
@@ -808,8 +818,8 @@ local function YRHR_fake_script() -- Checkmark_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YRHR_fake_script)()
-local function BQZWM_fake_script() -- Checkmark_4.LocalScript 
+coroutine.wrap(AMFGMO_fake_script)()
+local function NILFAD_fake_script() -- Checkmark_4.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_4)
 
 	--[[
@@ -849,8 +859,8 @@ local function BQZWM_fake_script() -- Checkmark_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BQZWM_fake_script)()
-local function UZOZ_fake_script() -- Checkmark_5.LocalScript 
+coroutine.wrap(NILFAD_fake_script)()
+local function AYDIX_fake_script() -- Checkmark_5.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_5)
 
 	--[[
@@ -890,8 +900,8 @@ local function UZOZ_fake_script() -- Checkmark_5.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UZOZ_fake_script)()
-local function VTOFND_fake_script() -- Checkmark_6.LocalScript 
+coroutine.wrap(AYDIX_fake_script)()
+local function VZQIY_fake_script() -- Checkmark_6.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_6)
 
 	--[[
@@ -931,8 +941,8 @@ local function VTOFND_fake_script() -- Checkmark_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VTOFND_fake_script)()
-local function QGKWCIU_fake_script() -- Checkmark_7.LocalScript 
+coroutine.wrap(VZQIY_fake_script)()
+local function HBBX_fake_script() -- Checkmark_7.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_7)
 
 	--[[
@@ -972,8 +982,8 @@ local function QGKWCIU_fake_script() -- Checkmark_7.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QGKWCIU_fake_script)()
-local function SSNAU_fake_script() -- Checkmark_8.LocalScript 
+coroutine.wrap(HBBX_fake_script)()
+local function HLXR_fake_script() -- Checkmark_8.LocalScript 
 	local script = Instance.new('LocalScript', Checkmark_8)
 
 	--[[
@@ -1013,8 +1023,8 @@ local function SSNAU_fake_script() -- Checkmark_8.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SSNAU_fake_script)()
-local function RPOAP_fake_script() -- UGG.Open 
+coroutine.wrap(HLXR_fake_script)()
+local function NLDHI_fake_script() -- UGG.Open 
 	local script = Instance.new('LocalScript', UGG)
 
 	local main = script.Parent.Parent
@@ -1026,4 +1036,4 @@ local function RPOAP_fake_script() -- UGG.Open
 		main.UGG.Interactable = false
 	end)
 end
-coroutine.wrap(RPOAP_fake_script)()
+coroutine.wrap(NLDHI_fake_script)()
