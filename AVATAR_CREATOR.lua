@@ -1,7 +1,7 @@
 --[[
 THIS IS A REUPLOAD BECAUSE ROUXHAVER DELETED ALL OF HIS SOCIALS!
 
-Made by Rouxhaver, Reuploaded by Windows7King
+Made by Rouxhaver, Fixed by Windows7King
 
 R and T to rotate,
 drag floor to change hip height,
@@ -259,8 +259,8 @@ Create.MouseButton1Up:Connect(function()
 	camera.CameraSubject = newchar.Humanoid
 	camera.FieldOfView = 70
 
-	wait(game:GetService("Players").RespawnTime+.3)
-
+	replicatesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+    wait(game.Players.RespawnTime + .1)
 	character.Humanoid.Health = 0
 
 	for i,v in pairs(newchar:GetChildren()) do
