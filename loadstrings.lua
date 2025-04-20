@@ -1,5 +1,8 @@
 --Loadstrings:
 
+--FE BIRD V1.4
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FE_BIRD.lua"))()
+
 --BTOOLS V3 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/BTOOLS_V3.lua"))()
 
