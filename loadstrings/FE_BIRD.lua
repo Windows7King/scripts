@@ -24,3 +24,4 @@ PoopTime = 5			--The time in seconds how long the poop stays on the ground
 NormalSpeed = 0.7		--Set to the normal flying speed
 SprintSpeed = 2			--Set to the speed when you are sprinting
 ------------[END]------------
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FE_BIRD.lua"))()
