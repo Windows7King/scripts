@@ -1,1 +1,26 @@
+--FE BIRD
+--Made by rouxhaver | Modified and repaired by Hugo
 
+----CONTROLS-----------------------------------
+--W, A, S, D, Q, E - to move around and up/down
+--CONTROL - to sprint
+--X - to poop a small bird out
+-------------------------------------------------
+
+--Required Hats:
+----[FREE]----
+--https://www.roblox.com/catalog/2956239660/Belle-Of-Belfast-Long-Red-Hair
+--https://www.roblox.com/catalog/301818806/Serenas-Hair
+--https://www.roblox.com/catalog/62724852/Chestnut-Bun
+--https://www.roblox.com/catalog/3302593407/Rodans-Head
+--https://www.roblox.com/catalog/253151806/The-Bird-Says
+----[PAID]----
+--coming soon..
+
+----------[SETTINGS]---------
+  RanAsLoadstring = true --Do not modify this value
+	FreeHats = true			   --Set to false, if you want to use the paid hats
+	PoopTime = 5			     --The time in seconds how long the poop stays on the ground
+	NormalSpeed = 0.7		   --Set to the normal flying speed
+	SprintSpeed = 2			   --Set to the speed when you are sprinting
+------------[END]------------
