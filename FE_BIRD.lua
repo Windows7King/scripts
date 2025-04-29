@@ -1,31 +1,47 @@
-
---Made by rouxhaver | Edited and FIXED by Hugo
+--FE BIRD
+--Made by rouxhaver | Modified and repaired by Hugo
 
 ----CONTROLS-----------------------------------
 --W, A, S, D, Q, E - to move around and up/down
---SHIFT - to sprint
+--CONTROL - to sprint
 --X - to poop a small bird out
 -------------------------------------------------
 
 --Required Hats:
+----[FREE]----
 --https://www.roblox.com/catalog/2956239660/Belle-Of-Belfast-Long-Red-Hair
 --https://www.roblox.com/catalog/301818806/Serenas-Hair
 --https://www.roblox.com/catalog/62724852/Chestnut-Bun
 --https://www.roblox.com/catalog/3302593407/Rodans-Head
 --https://www.roblox.com/catalog/253151806/The-Bird-Says
 
---Version: 1.4
-task.wait(0.25)
+----[PAID]   PRICE 555R$----
+--https://www.roblox.com/catalog/15301922285/Seagull-Head
+--https://www.roblox.com/catalog/17179460188/Paper-Mache-Poop
+--https://www.roblox.com/catalog/5677350668/The-Right-Holy-Wing
+--https://www.roblox.com/catalog/5677348945/The-Left-Holy-Wing
+--https://www.roblox.com/catalog/12331913497/Faceless-Head-White
+--Version: 1.7
+
+----------[SETTINGS]---------
+if RanAsLoadstring == nil then	
+	PoopTime = 5			--The time in seconds how long the poop stays on the ground
+	NormalSpeed = 0.7		--Set to the normal flying speed
+	SprintSpeed = 2			--Set to the speed when you are sprinting
+end
+------------[END]------------
+
+task.wait(0.20)
 
 if not replicatesignal then
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Reanimation Failed",
         Text = "Your executor does not support permadeath :(",
-        Duration = 5
+        Duration = 3
     })
     return
 else
-	print("Bird FE loaded | Version 1.4")
+	print("Bird FE loaded | Version 1.7")
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Bird FE",
 			Text = "Created by Rouxhaver and modified by Hugo",
@@ -34,7 +50,7 @@ else
 end
 
 local fart = Instance.new("Sound")
-fart.SoundId = "rbxassetid://8152780685" -- replace with your own sound ID
+fart.SoundId = "rbxassetid://8152780685"
 fart.Parent = workspace
 fart.Volume = 0.8
 
@@ -95,6 +111,7 @@ lp.Character = char
 bob_offset = 0
 bob_change = 0.02
 pooped = false
+shiftlock = false
 
 wing_angle = 0
 wa_change = 5 --Wing Flap Speed
@@ -154,12 +171,21 @@ wa_change = 5 --Wing Flap Speed
 			if not (UserInputService:IsKeyDown(Enum.KeyCode.D) or UserInputService:IsKeyDown(Enum.KeyCode.A) or UserInputService:IsKeyDown(Enum.KeyCode.W) or UserInputService:IsKeyDown(Enum.KeyCode.S) or UserInputService:IsKeyDown(Enum.KeyCode.Q) or UserInputService:IsKeyDown(Enum.KeyCode.E)) then
 				moving=false
 			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then do
-				speed = 2
+			if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then do
+				speed = SprintSpeed
 			end else
-			speed = 0.70
+			speed = NormalSpeed
 			end
 			Center.Position = current_position
+
+			
+			UserInputService:GetPropertyChangedSignal("MouseBehavior"):Connect(function()
+    			if UserInputService.MouseBehavior == Enum.MouseBehavior.LockCenter then
+        			shiftlock = true
+    			else
+					shiftlock = false
+				end
+			end)
 		end
 	end)()
 
@@ -216,14 +242,20 @@ wa_change = 5 --Wing Flap Speed
 			if wing_angle <= -30 then
 				wa_change = -wa_change
 			end
-		if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+		if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
 		wing_angle += wa_change*2
 		else
 		wing_angle += wa_change
 		end
-		if moving == true then
+
+		if shiftlock == true then
 			lastcam = camera.CFrame.Rotation
+		else
+			if moving == true then
+				lastcam = camera.CFrame.Rotation
+			end
 		end
+
 			if pooped == false then
 				poop.CFrame = (Center.CFrame + Vector3.new(0,bob_offset,0))
 				poop.Anchored = true
@@ -237,7 +269,7 @@ wa_change = 5 --Wing Flap Speed
 				pooped = true
 				poop.Anchored = false
 				fart:Play()
-				task.delay(5, function()
+				task.delay(PoopTime, function()
 					pooped = false
 				end)
 			end
@@ -245,30 +277,59 @@ wa_change = 5 --Wing Flap Speed
 end)()
 
 	function Move(part, cframe)
+		if not part then return end
 		part.Velocity = Vector3.new(0,30,0)
 		local tween = game:GetService("TweenService"):Create(part, TweenInfo.new(0), {CFrame = cframe})
 		tween:Play()
 	end
 
-	vbody = char["Kate Hair"].Handle
-	vhead = char["RoHead"].Handle
-	vlwing = char["LongRedHair"].Handle
-	vrwing = char["LongHairBeanie"].Handle
-	vpoop = char["TwitterBird"].Handle
+
+function checkHats(hatname)
+	for _, child in ipairs(char:GetChildren()) do
+		if child:IsA("Accessory") and child.Name == hatname then
+			return child:FindFirstChild("Handle")
+		end
+	end
+	return nil
+end
+
+
+		--FREE HATS--
+		vbody = checkHats("Kate Hair")
+		vhead = checkHats("RoHead")
+		vlwing = checkHats("LongRedHair")
+		vrwing = checkHats("LongHairBeanie")
+		vpoop = checkHats("TwitterBird")
+		--PAID HATS--
+		nbody = checkHats("Faceless Head")
+		nhead = checkHats("Accessory (SeagullHeadd)")
+		nlwing = checkHats("HolyWing")
+		nrwing = checkHats("HolyWing2")
+		npoop = checkHats("Accessory (MeshPartAccessory)")
+
+
+
+	rightWingOffset = CFrame.new(0.35, 0, -1)
+	leftWingOffset = CFrame.new(-0.35, 0, -1)
+	wingRotation = CFrame.Angles(math.rad(100), 0, math.rad(180))
 
 	while moveLoopRunning do
 		task.wait()
+		--FREE--
 		Move(vpoop, poop.CFrame)
 		Move(vbody, body.CFrame)
 		Move(vhead, head.CFrame)
 		Move(vrwing, (rwing.CFrame- rwing.CFrame.RightVector * .3) * CFrame.Angles(math.rad(90),0,math.rad(90)))
 		Move(vlwing, (lwing.CFrame - lwing.CFrame.RightVector * -.3) * CFrame.Angles(math.rad(-90),0,math.rad(-90)))
+		--PAID--
+		Move(npoop, poop.CFrame)
+		Move(nbody, body.CFrame * CFrame.Angles(math.rad(90),0,math.rad(0)))
+		Move(nhead, (head.CFrame) * CFrame.Angles(math.rad(180),0,math.rad(-180)))
+		Move(nrwing, rwing.CFrame * rightWingOffset * wingRotation)
+		Move(nlwing, lwing.CFrame * leftWingOffset * wingRotation)
 	end
 end
 
-------------------------------------------------
-----------------------RUN-----------------------
-------------------------------------------------
 
 --GUI--
 
