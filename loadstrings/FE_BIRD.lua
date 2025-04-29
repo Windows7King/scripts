@@ -4,7 +4,7 @@
 ----CONTROLS-----------------------------------
 --W, A, S, D, Q, E - to move around and up/down
 --CONTROL - to sprint
---X - to poop a small bird out
+--X - to poop
 -------------------------------------------------
 
 --Required Hats:
