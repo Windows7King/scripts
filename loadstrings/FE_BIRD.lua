@@ -14,14 +14,19 @@
 --https://www.roblox.com/catalog/62724852/Chestnut-Bun
 --https://www.roblox.com/catalog/3302593407/Rodans-Head
 --https://www.roblox.com/catalog/253151806/The-Bird-Says
+
 ----[PAID]----
---coming soon..
+--https://www.roblox.com/catalog/15301922285/Seagull-Head
+--https://www.roblox.com/catalog/17179460188/Paper-Mache-Poop
+--https://www.roblox.com/catalog/5677350668/The-Right-Holy-Wing
+--https://www.roblox.com/catalog/5677348945/The-Left-Holy-Wing
+--https://www.roblox.com/catalog/12331913497/Faceless-Head-White
+
 
 ----------[SETTINGS]---------
-RanAsLoadstring = true		--Do not modify this value
-FreeHats = true			--Set to false, if you want to use the paid hats
-PoopTime = 5			--The time in seconds how long the poop stays on the ground
-NormalSpeed = 0.7		--Set to the normal flying speed
-SprintSpeed = 2			--Set to the speed when you are sprinting
+RanAsLoadstring = true	--Do not modify this value
+PoopTime = 5			      --The time in seconds how long the poop stays on the ground
+NormalSpeed = 0.7	      --Set to the normal flying speed
+SprintSpeed = 2			    --Set to the speed when you are sprinting
 ------------[END]------------
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Windows7King/scripts/main/FE_BIRD.lua"))()
